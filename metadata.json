@@ -1,0 +1,6 @@
+{
+  "name": "YY Assistant",
+  "description": "100% offline on-device AI assistant with 3-tier hardware detection, 10 curated GGUF models, local RAG library, OCR/document scanner, voice mode, benchmarks, tools, and privacy controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
