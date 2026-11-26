@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
@@ -32,10 +32,6 @@ jobs:
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-
-      - name: Restore debug keystore
-        if: hashFiles('debug.keystore') == '' && hashFiles('debug.keystore.base64') != ''
-        run: base64 --decode debug.keystore.base64 > debug.keystore
 
       - name: Assemble Debug APK
         run: ./gradlew assembleDebug
